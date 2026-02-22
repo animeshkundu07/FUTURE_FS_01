@@ -51,7 +51,7 @@ export default function About() {
 
         {/* Right: Education + Achievement */}
         <div className="about-right reveal" ref={eduRef} style={{ transitionDelay: '0.15s' }}>
-          <span className="section-label" style={{ marginBottom: '1rem', display: 'block' }}>// education</span>
+          {/* <span className="section-label" style={{ marginBottom: '1rem', display: 'block' }}>// education</span> */}
           <div className="edu-list">
             {education.map(edu => (
               <EduCard key={edu.degree} {...edu} />
