@@ -30,7 +30,7 @@ export default function About() {
   return (
     <section id="about" className="about-section">
       <div className="reveal" ref={titleRef}>
-        <span className="section-label">// 01 — about me</span>
+        {/* <span className="section-label">// 01 — about me</span> */}
         <h2 className="section-title">Who I Am</h2>
         <div className="divider" />
       </div>
