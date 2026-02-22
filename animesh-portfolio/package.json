@@ -16,10 +16,11 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
+  "extends": ["react-app"],
+  "rules": {
+    "react/jsx-no-comment-textnodes": "warn"
+  }
+},
   "browserslist": {
     "production": [
       ">0.2%",
