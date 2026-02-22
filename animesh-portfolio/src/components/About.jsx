@@ -30,13 +30,13 @@ export default function About() {
   return (
     <section id="about" className="about-section">
       <div className="reveal" ref={titleRef}>
-        <span className="section-label">// 01 — about me</span>
+        {/* <span className="section-label">// 01 — about me</span> */}
         <h2 className="section-title">Who I Am</h2>
         <div className="divider" />
       </div>
 
       <div className="about-grid">
-        {/* Left: Bio + Stats */}
+        
         <div className="about-text reveal" ref={textRef}>
           {personalInfo.about.map((para, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: para }} />
@@ -49,7 +49,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right: Education + Achievement */}
+        
         <div className="about-right reveal" ref={eduRef} style={{ transitionDelay: '0.15s' }}>
           <span className="section-label" style={{ marginBottom: '1rem', display: 'block' }}>// education</span>
           <div className="edu-list">

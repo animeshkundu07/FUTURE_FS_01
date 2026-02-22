@@ -16,7 +16,7 @@ const contactMethods = [
 
 export default function Contact() {
   const [form, setForm]     = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('idle'); // idle | loading | success | error
+  const [status, setStatus] = useState('idle'); 
 
   const titleRef = useScrollReveal();
   const leftRef  = useScrollReveal();
@@ -54,7 +54,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section">
       <div className="reveal" ref={titleRef}>
-        <span className="section-label">// 05 — contact</span>
+        {/* <span className="section-label">// 05 — contact</span> */}
         <h2 className="section-title">Let's Connect</h2>
         <div className="divider" />
         <p className="section-sub">
@@ -64,7 +64,7 @@ export default function Contact() {
       </div>
 
       <div className="contact-grid">
-        {/* Left: contact methods */}
+        
         <div className="reveal" ref={leftRef}>
           <p className="contact-intro">
             Whether you have a project in mind, a question about my work,
@@ -92,7 +92,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right: form */}
+        
         <div className="reveal" ref={rightRef} style={{ transitionDelay: '0.15s' }}>
           <form className="contact-form" onSubmit={handleSubmit} noValidate>
             <div className="form-group">

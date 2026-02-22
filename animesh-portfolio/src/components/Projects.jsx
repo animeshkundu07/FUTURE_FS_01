@@ -22,7 +22,7 @@ function ProjectCard({ project, delay }) {
   return (
     <div className="project-card reveal" ref={ref} style={{ transitionDelay: `${delay}s` }}>
 
-      {/* Screenshot preview */}
+      
       <div className="project-preview">
         {!imgError && projectImages[project.name] ? (
           <img
@@ -37,7 +37,7 @@ function ProjectCard({ project, delay }) {
           </div>
         )}
 
-        {/* Overlay with links — appears on hover */}
+        
         <div className="project-preview-overlay">
           <a
             href={project.liveUrl}
@@ -58,7 +58,7 @@ function ProjectCard({ project, delay }) {
         </div>
       </div>
 
-      {/* Card body */}
+      
       <div className="project-body">
         <div className="project-meta">
           <div className="project-name">{project.name}</div>
@@ -78,7 +78,7 @@ function ProjectCard({ project, delay }) {
         </div>
       </div>
 
-      {/* Tech pills */}
+      
       <div className="project-footer">
         {project.techStack.map(tech => (
           <span key={tech} className="tech-pill">{tech}</span>
@@ -95,7 +95,7 @@ export default function Projects() {
   return (
     <section id="projects" className="projects-section">
       <div className="reveal" ref={titleRef}>
-        <span className="section-label">// 03 — projects</span>
+        {/* <span className="section-label">// 03 — projects</span> */}
         <h2 className="section-title">What I've Built</h2>
         <div className="divider" />
         <p className="section-sub">Real projects, live on the web — built from scratch with modern tools.</p>

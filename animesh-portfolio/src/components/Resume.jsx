@@ -25,7 +25,7 @@ function InlineResume() {
           ))}
         </p>
 
-        {/* Skills */}
+        
         <div className="resume-section">
           <h3>Technical Skills</h3>
           {skillGroups.map(group => (
@@ -38,7 +38,7 @@ function InlineResume() {
           ))}
         </div>
 
-        {/* Education */}
+        
         <div className="resume-section">
           <h3>Education</h3>
           {education.map(edu => (
@@ -49,7 +49,7 @@ function InlineResume() {
           ))}
         </div>
 
-        {/* Projects */}
+        
         <div className="resume-section">
           <h3>Academic Projects</h3>
           {projects.map(proj => (
@@ -66,7 +66,7 @@ function InlineResume() {
           ))}
         </div>
 
-        {/* Achievements */}
+        
         <div className="resume-section">
           <h3>Achievements</h3>
           <div className="resume-item">
@@ -89,7 +89,7 @@ export default function Resume() {
   return (
     <section id="resume" className="resume-section">
       <div className="reveal" ref={titleRef}>
-        <span className="section-label">// 04 — resume</span>
+        {/* <span className="section-label">// 04 — resume</span> */}
         <h2 className="section-title">My Resume</h2>
         <div className="divider" />
       </div>

@@ -86,7 +86,7 @@ export default function Skills() {
   return (
     <section id="skills" className="skills-section">
       <div className="reveal" ref={titleRef}>
-        <span className="section-label">// 02 — tech stack</span>
+        {/* <span className="section-label">// 02 — tech stack</span> */}
         <h2 className="section-title">Skills & Tools</h2>
         <div className="divider" />
       </div>
