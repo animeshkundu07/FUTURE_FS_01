@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import { projects } from '../data/portfolioData';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Projects.css';
+import wanderlustImg from '../assets/wanderlust-preview.jpeg';
+import nexusImg from '../assets/nexus-preview.jpeg';
 
 
+// const projectImages = {
+//   'WanderLust': require('../assets/wanderlust-preview.jpeg'),
+//   'Nexus':      require('../assets/nexus-preview.jpeg'),
+// };
 const projectImages = {
-  'WanderLust': require('../assets/wanderlust-preview.jpeg'),
-  'Nexus':      require('../assets/nexus-preview.jpeg'),
+  'WanderLust': wanderlustImg,
+  'Nexus':      nexusImg,
 };
 
 function ProjectCard({ project, delay }) {
