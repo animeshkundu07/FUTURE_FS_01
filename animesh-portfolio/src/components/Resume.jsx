@@ -89,7 +89,7 @@ export default function Resume() {
   return (
     <section id="resume" className="resume-section">
       <div className="reveal" ref={titleRef}>
-        <span className="section-label">// 04 — resume</span>
+        {/* <span className="section-label">// 04 — resume</span> */}
         <h2 className="section-title">My Resume</h2>
         <div className="divider" />
       </div>
