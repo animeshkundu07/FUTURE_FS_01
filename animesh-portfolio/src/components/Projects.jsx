@@ -95,7 +95,7 @@ export default function Projects() {
   return (
     <section id="projects" className="projects-section">
       <div className="reveal" ref={titleRef}>
-        <span className="section-label">// 03 — projects</span>
+        {/* <span className="section-label">// 03 — projects</span> */}
         <h2 className="section-title">What I've Built</h2>
         <div className="divider" />
         <p className="section-sub">Real projects, live on the web — built from scratch with modern tools.</p>
