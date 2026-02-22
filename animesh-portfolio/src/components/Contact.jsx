@@ -54,7 +54,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section">
       <div className="reveal" ref={titleRef}>
-        <span className="section-label">// 05 — contact</span>
+        {/* <span className="section-label">// 05 — contact</span> */}
         <h2 className="section-title">Let's Connect</h2>
         <div className="divider" />
         <p className="section-sub">
