@@ -6,7 +6,8 @@
     "@emailjs/browser": "^4.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "typewriter-effect": "^2.22.0"
   },
   "scripts": {
     "dev": "react-scripts start",
@@ -16,11 +17,13 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-  "extends": ["react-app"],
-  "rules": {
-    "react/jsx-no-comment-textnodes": "warn"
-  }
-},
+    "extends": [
+      "react-app"
+    ],
+    "rules": {
+      "react/jsx-no-comment-textnodes": "warn"
+    }
+  },
   "browserslist": {
     "production": [
       ">0.2%",
