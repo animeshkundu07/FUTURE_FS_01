@@ -1,0 +1,156 @@
+/* ── LOADER OVERLAY ── */
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #0a0a0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Enter state — visible */
+.loader-overlay--enter {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Exit state — fade + slide up */
+.loader-overlay--exit {
+  animation: loaderExit 0.6s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes loaderExit {
+  0%   { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-60px); pointer-events: none; }
+}
+
+/* ── CONTENT ── */
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── LOGO ── */
+.loader-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.05em;
+  animation: logoEnter 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.loader-logo--exit {
+  animation: logoExit 0.4s ease forwards;
+}
+
+@keyframes logoEnter {
+  from { opacity: 0; transform: scale(0.6) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes logoExit {
+  to { opacity: 0; transform: scale(1.1); }
+}
+
+.loader-logo-text {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(4rem, 12vw, 7rem);
+  color: #e8e6f0;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.loader-logo-dot {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(4rem, 12vw, 7rem);
+  color: #7c6af7;
+  line-height: 1;
+  animation: dotPulse 1s ease infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { color: #7c6af7; }
+  50%       { color: #c084fc; }
+}
+
+/* ── SUBTITLE ── */
+.loader-subtitle {
+  font-family: 'DM Mono', monospace;
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  color: #6b6985;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+
+.loader-subtitle--exit {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* ── PROGRESS BAR ── */
+.loader-bar-wrap {
+  width: clamp(180px, 30vw, 280px);
+  height: 2px;
+  background: #2a2a3a;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7c6af7, #c084fc, #38bdf8);
+  border-radius: 2px;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 12px rgba(124,106,247,0.6);
+}
+
+/* ── PERCENT ── */
+.loader-percent {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: #6b6985;
+  letter-spacing: 0.08em;
+  animation: fadeUp 0.6s 0.5s ease both;
+}
+
+/* ── BACKGROUND RINGS ── */
+.loader-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(124,106,247,0.08);
+  animation: ringPulse 3s ease infinite;
+  pointer-events: none;
+}
+
+.loader-ring--1 {
+  width: 300px; height: 300px;
+  animation-delay: 0s;
+}
+
+.loader-ring--2 {
+  width: 500px; height: 500px;
+  animation-delay: 0.5s;
+  border-color: rgba(192,132,252,0.05);
+}
+
+.loader-ring--3 {
+  width: 700px; height: 700px;
+  animation-delay: 1s;
+  border-color: rgba(56,189,248,0.04);
+}
+
+@keyframes ringPulse {
+  0%, 100% { transform: scale(1);    opacity: 0.6; }
+  50%       { transform: scale(1.05); opacity: 1;   }
+}
