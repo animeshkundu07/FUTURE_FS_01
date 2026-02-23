@@ -202,3 +202,18 @@ section {
 @media (max-width: 640px) {
   section { padding: 5rem 5vw; }
 }
+
+/* ── APP CONTENT TRANSITION ── */
+.app-content {
+  transition: opacity 0.4s ease;
+}
+
+.app-content--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.app-content--visible {
+  opacity: 1;
+  pointer-events: all;
+}
