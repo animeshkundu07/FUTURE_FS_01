@@ -1,5 +1,39 @@
-import React from 'react';
+// import React from 'react';
+// import { useTheme } from './hooks/useTheme';
+// import Navbar from './components/Navbar';
+// import Hero from './components/Hero';
+// import About from './components/About';
+// import Skills from './components/Skills';
+// import Projects from './components/Projects';
+// import Resume from './components/Resume';
+// import Contact from './components/Contact';
+// import Footer from './components/Footer';
+// import './styles/global.css';
+
+// function App() {
+//   const { theme, toggleTheme } = useTheme();
+
+//   return (
+//     <div className="App">
+//       <Navbar theme={theme} toggleTheme={toggleTheme} />
+//       <main>
+//         <Hero />
+//         <About />
+//         <Skills />
+//         <Projects />
+//         <Resume />
+//         <Contact />
+//       </main>
+//       <Footer />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React, { useState, useCallback } from 'react';
 import { useTheme } from './hooks/useTheme';
+import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,19 +46,28 @@ import './styles/global.css';
 
 function App() {
   const { theme, toggleTheme } = useTheme();
+  const [loading, setLoading] = useState(true);
+
+  const handleLoaderComplete = useCallback(() => {
+    setLoading(false);
+  }, []);
 
   return (
     <div className="App">
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Resume />
-        <Contact />
-      </main>
-      <Footer />
+      {loading && <Loader onComplete={handleLoaderComplete} />}
+
+      <div className={`app-content ${loading ? 'app-content--hidden' : 'app-content--visible'}`}>
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Resume />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
