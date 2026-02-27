@@ -16,8 +16,9 @@ const Navbar = () => {
   return (
     <nav style={styles.nav}>
       <div style={styles.brand}>
-        <span style={styles.logo}>⚡</span>
-        <span style={styles.brandText}>MiniCRM</span>
+        {/* <span style={styles.logo}>⚡</span>
+        <span style={styles.brandText}>MiniCRM</span> */}
+        <img src="/crm-logo.svg" alt="MiniCRM" style={{ width: 38, height: 38, borderRadius: 10 }} />
       </div>
 
       <div style={styles.links}>

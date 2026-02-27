@@ -38,8 +38,9 @@ const LoginPage = () => {
       <div style={styles.card}>
         {/* Header */}
         <div style={styles.header}>
-          <div style={styles.iconWrap}>⚡</div>
-          <h1 style={styles.title}>MiniCRM</h1>
+          {/* <div style={styles.iconWrap}>⚡</div>
+          <h1 style={styles.title}>MiniCRM</h1> */}
+          <img src="/crm-logo.svg" alt="MiniCRM" style={{ width: 80, height: 80, borderRadius: 20, marginBottom: 12 }} />
           <p style={styles.subtitle}>Admin Portal — Sign in to continue</p>
         </div>
 

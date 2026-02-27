@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f9fafb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e7ff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#4f46e5" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect x="10" y="10" width="180" height="180" rx="38" ry="38" fill="url(#bgGrad)" filter="url(#shadow)"/>
+
+  <!-- Inner subtle glow circle -->
+  <circle cx="100" cy="85" r="62" fill="white" fill-opacity="0.05"/>
+
+  <!-- People/leads icon: three stacked bars representing pipeline -->
+  <!-- Bar 1 - top (new leads) -->
+  <rect x="38" y="58" width="90" height="14" rx="7" fill="white" fill-opacity="0.3"/>
+  <!-- Bar 1 fill -->
+  <rect x="38" y="58" width="90" height="14" rx="7" fill="white" fill-opacity="0.15"/>
+  <rect x="38" y="58" width="55" height="14" rx="7" fill="white" fill-opacity="0.9"/>
+
+  <!-- Bar 2 - middle (contacted) -->
+  <rect x="38" y="82" width="90" height="14" rx="7" fill="white" fill-opacity="0.15"/>
+  <rect x="38" y="82" width="72" height="14" rx="7" fill="white" fill-opacity="0.75"/>
+
+  <!-- Bar 3 - bottom (converted) -->
+  <rect x="38" y="106" width="90" height="14" rx="7" fill="white" fill-opacity="0.15"/>
+  <rect x="38" y="106" width="36" height="14" rx="7" fill="white" fill-opacity="0.55"/>
+
+  <!-- Upward trend arrow -->
+  <g fill="url(#arrowGrad)">
+    <polygon points="148,108 148,72 136,84 131,79 152,58 173,79 168,84 156,72 156,108" fill="white" fill-opacity="0.95"/>
+  </g>
+
+  <!-- Bottom wordmark -->
+  <text x="100" y="158" font-family="'Trebuchet MS', sans-serif" font-size="18" font-weight="700" fill="white" fill-opacity="0.95" text-anchor="middle" letter-spacing="2">MiniCRM</text>
+
+  <!-- Tiny tagline -->
+  <text x="100" y="174" font-family="'Trebuchet MS', sans-serif" font-size="9" font-weight="400" fill="white" fill-opacity="0.6" text-anchor="middle" letter-spacing="1.5">LEAD MANAGEMENT</text>
+</svg>
