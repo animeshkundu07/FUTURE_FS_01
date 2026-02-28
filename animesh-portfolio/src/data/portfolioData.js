@@ -113,4 +113,20 @@ export const projects = [
     ],
     techStack: ['WebRTC', 'Socket.io', 'Node.js', 'Express.js', 'JavaScript'],
   },
+  {
+    name: 'MiniCRM',
+    tagline: 'Lead Management Dashboard',
+    description: 'A clean and functional CRM dashboard for managing leads through their full pipeline — from new contact to conversion, with real-time stats and filtering.',
+    icon: '📊',
+    iconColor: 'purple',
+    liveUrl: 'https://mini-crm-two-eta.vercel.app',
+    githubUrl: 'https://github.com/animeshkundu07/FUTURE_FS_01/tree/main/mini-crm',
+    features: [
+      'Dashboard with live stats — Total Leads, New, Contacted, Converted',
+      'Conversion rate progress bar with real-time calculation',
+      'Lead table with source tags, status badges, and date tracking',
+      'Clean admin UI with Dashboard and Leads navigation views',
+    ],
+    techStack: ['React.js', 'JavaScript', 'CSS', 'Vercel'],
+  },
 ];

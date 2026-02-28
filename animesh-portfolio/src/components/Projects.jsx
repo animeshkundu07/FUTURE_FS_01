@@ -4,6 +4,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Projects.css';
 import wanderlustImg from '../assets/wanderlust-preview.jpeg';
 import nexusImg from '../assets/nexus-preview.jpeg';
+import miniCrmImg   from '../assets/minicrm-preview.png';
 
 
 // const projectImages = {
@@ -13,6 +14,7 @@ import nexusImg from '../assets/nexus-preview.jpeg';
 const projectImages = {
   'WanderLust': wanderlustImg,
   'Nexus':      nexusImg,
+  'MiniCRM':    miniCrmImg,
 };
 
 function ProjectCard({ project, delay }) {
