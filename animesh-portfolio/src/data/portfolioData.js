@@ -127,6 +127,6 @@ export const projects = [
       'Lead table with source tags, status badges, and date tracking',
       'Clean admin UI with Dashboard and Leads navigation views',
     ],
-    techStack: ['React.js', 'JavaScript', 'CSS', 'Vercel'],
+    techStack: ['React.js', 'JavaScript', 'CSS','Node.js', 'Express.js', 'MongoDB', 'Mongoose',  'JWT' ],
   },
 ];
